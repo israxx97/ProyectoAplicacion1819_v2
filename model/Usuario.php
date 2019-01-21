@@ -11,7 +11,7 @@
  *
  * @author Israel García Cabañeros
  */
-require_once './UsuarioPDO.php';
+require_once 'UsuarioPDO.php';
 
 class Usuario {
 
@@ -94,7 +94,8 @@ class Usuario {
         $a_usuarios = UsuarioPDO::validarUsuario($codUsuario, $password);
         
         if (!empty($a_usuarios)) {
-            $usuario = new Usuario($codUsuario, 
+            $usuario = new Usuario(
+                    $codUsuario, 
                     $password, 
                     $a_usuarios['T01_DescUsuario'], 
                     $a_usuarios['T01_NumAccesos'], 

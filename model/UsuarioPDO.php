@@ -14,7 +14,7 @@
 require_once "DBPDO.php";
 require_once "UsuarioDB.php";
 
-class UsuarioPDO implements UsuarioDB {
+class UsuarioPDO {
 
     public static function validarUsuario($codUsuario, $password) {
         $sql = 'SELECT * FROM T01_Usuarios WHERE T01_CodUsuario = ? AND T01_Password = SHA2(?, 256)';
