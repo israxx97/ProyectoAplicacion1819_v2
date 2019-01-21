@@ -11,6 +11,8 @@
  *
  * @author Israel García Cabañeros
  */
+require_once './UsuarioPDO.php';
+
 class Usuario {
 
     private $codUsuario;
