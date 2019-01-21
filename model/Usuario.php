@@ -12,5 +12,22 @@
  * @author Israel García Cabañeros
  */
 class Usuario {
-    //put your code here
+
+    private $codUsuario;
+    private $password;
+    private $descUsuario;
+    private $numAccesos;
+    private $fechaHoraUltimaConexion;
+    private $perfil;
+    private $listaOpinionesUsuario;
+
+    function __construct($codUsuario, $password, $descUsuario, $numAccesos, $fechaHoraUltimaConexion, $perfil) {
+        $this->codUsuario = $codUsuario;
+        $this->password = $password;
+        $this->descUsuario = $descUsuario;
+        $this->numAccesos = $numAccesos;
+        $this->fechaHoraUltimaConexion = $fechaHoraUltimaConexion;
+        $this->perfil = $perfil;
+    }
+
 }
