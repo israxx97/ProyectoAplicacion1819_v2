@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <?php
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -15,15 +14,8 @@ if (isset($_SESSION['pagina'])) {
 }
 ?>
 
-                        <?php
-                        require_once $vista;
-                        ?>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        <div>
-            <a href="https://github.com/israxx97/ProyectoAplicacion1819_v2">Repositorio</a>
-        </div>
-    </body>
-</html>
+<?php
+require_once $vista;
+?>
+
+
