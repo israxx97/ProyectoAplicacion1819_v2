@@ -27,7 +27,7 @@ if (isset($_SESSION['pagina'])) {
         <link rel="stylesheet" type="text/css" href="./../webroot/css/styles_1.css">
         <link rel="stylesheet" type="text/css" href="./../webroot/css/styles.css">
         <link rel="shortcut icon" href="./webroot/images/favicon2.png" type="image/x-icon"/>
-        <!-- <script>
+        <script>
             function mostrarContrasena() {
                 var tipo = document.getElementById("password");
 
@@ -37,7 +37,7 @@ if (isset($_SESSION['pagina'])) {
                     tipo.type = "password";
                 }
             }
-        </script> -->
+        </script>
     </head>
 
     <body>
@@ -57,6 +57,9 @@ if (isset($_SESSION['pagina'])) {
                     </div>
                 </div>
             </div>
+        </div>
+        <div>
+            <a href="https://github.com/israxx97/ProyectoAplicacion1819_v2">Repositorio</a>
         </div>
     </body>
 </html>

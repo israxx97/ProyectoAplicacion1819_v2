@@ -12,7 +12,7 @@
         <input name="password" type="password" value="<?php echo $_REQUEST['password']; ?>" class="form-control" placeholder="Contraseña">
     </div>
     <div class="row align-items-center remember">
-        <input  type="checkbox">Mostrar Contraseña <!-- onclick="mostrarContrasena()" -->
+        <input onclick="mostrarContrasena()" type="checkbox">Mostrar Contraseña <!-- onclick="mostrarContrasena()" -->
     </div>
     <div class="form-group">
         <input name="entrar" type="submit" value="Entrar" class="btn float-right login_btn">
