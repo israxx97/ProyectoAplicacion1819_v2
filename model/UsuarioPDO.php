@@ -11,6 +11,7 @@
  *
  * @author Israel García Cabañeros
  */
+require_once "UsuarioDB.php";
 require_once "DBPDO.php";
 require_once "UsuarioDB.php";
 
