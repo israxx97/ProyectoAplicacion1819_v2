@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css?family=Numans');
 
 html,body{
-    background: linear-gradient(#00ff, #ffff00, #00ff) !important;
+    /*background: linear-gradient(#00ffff, #ffff00) !important;*/
     height: 100%;
     font-family: 'Numans', sans-serif;
 }
