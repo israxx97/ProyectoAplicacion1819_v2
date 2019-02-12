@@ -240,12 +240,30 @@ class Usuario {
     }
 
     /*
-     * Función buscaUsuariosPorDesc();
+     * Función buscaUsuariosPorDesc($descripcion, $pagina, $numRegistros).
+     * 
+     * Función utilizada para buscar un usuario por su descripción.
+     * 
+     * @function buscaUsuariosPorDesc();
+     * @author Israel García Cabañeros.
+     * @version 1.0
+     * @since 2019-02-11
+     * @param $descripcion.
+     * @param $pagina.
+     * @param $numRegistros.
+     * @return objeto $usuario.
      */
-    
-    public static function buscaUsuariosPorDesc($descripcion, $pagina, $registrosPagina) {
-        
-        
+
+    public static function buscaUsuariosPorDesc($descripcion, $pagina, $numRegistros) {
+        $a_usuarios = UsuarioPDO::buscaUsuariosPorDesc($descripcion, $pagina, $numRegistros);
+
+        if (!empty($a_usuarios)) {
+            for ($numUsuarios = 0; $numUsuarios < count($a_usuarios); $numUsuarios++) {
+                $usuario[$numUsuarios] = new Usuario($a_usuarios[$numUsuarios]['T01_CodUsuario'], $a_usuarios[$numUsuarios]['T01_Password'], $a_usuarios[$numUsuarios]['T01_DescUsuario'], $a_usuarios[$numUsuarios]['T01_NumAccesos'], $a_usuarios[$numUsuarios]['T01_FechaHoraUltimaConexion'], $a_usuarios[$numUsuarios]['T01_Perfil']);
+            }
+        }
+
+        return $usuario;
     }
 
     public function buscaOpinion() {

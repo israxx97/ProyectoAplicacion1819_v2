@@ -6,46 +6,44 @@
  * and open the template in the editor.
  */
 $entradaOK = true;
-
 $a_respuesta = [username => null,
     password => null];
-
 $a_errores = [username => null,
     password => null];
-
 /* if (isset($_REQUEST['Registrarse'])) {
-    $_SESSION['pagina'] = 'registroUsuario';
-    header('Location: index.php');
-} else { */
-    if (isset($_REQUEST['entrar'])) {
-        $a_errores[username] = validacionFormularios::comprobarAlfabetico($_REQUEST['username'], LONGMAXUSUARIO, LONGMINUSUARIO, OBLIGATORIO);
-        $a_errores[password] = validacionFormularios::comprobarAlfaNumerico($_REQUEST['password'], LONGMAXPASS, LONGMINPASS, OBLIGATORIO);
-
-        foreach ($a_errores as $value => $key) {
-            if ($key != null) {
-                $entradaOK = false;
-                $_REQUEST[$value] = '';
-            }
+  $_SESSION['pagina'] = 'registroUsuario';
+  header('Location: index.php');
+  } else { */
+if (isset($_REQUEST['entrar'])) {
+    $a_errores[username] = validacionFormularios::comprobarAlfabetico($_REQUEST['username'], LONGMAXUSUARIO, LONGMINUSUARIO, OBLIGATORIO);
+    $a_errores[password] = validacionFormularios::comprobarAlfaNumerico($_REQUEST['password'], LONGMAXPASS, LONGMINPASS, OBLIGATORIO);
+    foreach ($a_errores as $value => $key) {
+        if ($key != null) {
+            $entradaOK = false;
+            $_REQUEST[$value] = '';
         }
     }
-    if (isset($_REQUEST['entrar']) && $entradaOK == true) {
-        $a_respuesta[username] = $_REQUEST['username'];
-        $a_respuesta[password] = $_REQUEST['password'];
-        $usuario = Usuario::validarUsuario($a_respuesta[username], $a_respuesta[password]);
-
-        if (is_null(($usuario))) {
-            $a_errores[password] = $a_errores[password] . 'Usuario o contraseña incorrectos.';
-            $_SESSION['pagina'] = 'login';
-            require_once $vistas['layout'];
-        } else {
-            $_SESSION['username'] = $usuario;
-            $_SESSION['pagina'] = 'inicio';
-            /* $_SESSION['visitas'] = '<p>' . Usuario::registrarUltimaConexion($_REQUEST['username']) . '</p>'; */
-            header("Location: index.php");
-        }
-    } else {
+}
+if (isset($_REQUEST['entrar']) && $entradaOK == true) {
+    $a_respuesta[username] = $_REQUEST['username'];
+    $a_respuesta[password] = $_REQUEST['password'];
+    $usuario = Usuario::validarUsuario($a_respuesta[username], $a_respuesta[password]);
+    if (is_null(($usuario))) {
+        $a_errores[password] = $a_errores[password] . 'Usuario o contraseña incorrectos.';
         $_SESSION['pagina'] = 'login';
         require_once $vistas['layout'];
+    } else {
+        $_SESSION['username'] = $usuario;
+        $_SESSION['pagina'] = 'inicio';
+        /* $_SESSION['visitas'] = '<p>' . Usuario::registrarUltimaConexion($_REQUEST['username']) . '</p>'; */
+        header("Location: index.php");
     }
+} else {
+    $_SESSION['pagina'] = 'login';
+    require_once $vistas['layout'];
+}
 /* } */
-    
+
+
+
+

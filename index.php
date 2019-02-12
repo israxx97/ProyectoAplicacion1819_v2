@@ -18,3 +18,20 @@ if (isset($_SESSION['pagina'])) {
 } else {
     include_once $controladores['login'];
 }
+
+/*switch (true) {
+    case (isset($_SESSION['username']) && !isset($_SESSION['pagina'])):
+        include_once $controladores['inicio'];
+
+        break;
+
+    case (isset($_SESSION['pagina'])):
+        include_once $controladores[$_SESSION['pagina']];
+
+        break;
+
+    default:
+        include_once $controladores['login'];
+
+        break;
+}*/

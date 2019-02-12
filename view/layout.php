@@ -18,4 +18,3 @@ if (isset($_SESSION['pagina'])) {
 require_once $vista;
 ?>
 
-
