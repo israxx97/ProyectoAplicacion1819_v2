@@ -53,8 +53,8 @@
                             <div class="form-group">
                                 <input name="entrar" type="submit" value="Entrar" class="btn float-right login_btn">
                             </div>
-                            <p style="color: red;"><?php $a_errores[username] ?></p>
-                            <p style="color: red;"><?php $a_errores[password]; ?></p>
+                            <p style="color: red;"><?php echo $a_errores[username] ?></p>
+                            <p style="color: red;"><?php echo $a_errores[password]; ?></p>
                             <!-- <div class="card-footer">
                                 <div class="d-flex justify-content-center links">
                                     ¿No tienes una cuenta?<a href="./view/register.php">Registrarse</a>

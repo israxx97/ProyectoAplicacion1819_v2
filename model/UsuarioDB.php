@@ -13,4 +13,15 @@
 interface UsuarioDB {
 
     public static function validarUsuario($codUsuario, $password);
+
+    public static function modificarUsuario($codUsuario, $password, $descripcion);
+
+    public function borrarUsuario($codUsuario);
+
+    public function registrarUltimaConexion($codUsuario);
+
+    public static function validarCodNoExiste($codUsuario);
+
+    public static function buscaUsuariosPorDesc($descripcion);
+
 }

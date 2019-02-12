@@ -88,7 +88,7 @@ class Usuario {
         $this->listaOpinionesUsuario = $listaOpinionesUsuario;
     }
 
-    /*
+    /**
      * Función validarUsuario($codUsuario, $password).
      * 
      * Función utilizada para validar un usuario en el inicio de sesión.
@@ -114,7 +114,7 @@ class Usuario {
         return $usuario;
     }
 
-    /*
+    /**
      * Función altaUsuario($codUsuario, $password, $descripcion).
      * 
      * Función utilizada para dar de alta o registrar un nuevo usuario.
@@ -140,7 +140,7 @@ class Usuario {
         return $usuario;
     }
 
-    /*
+    /**
      * Función modificarUsuario($password, $descripcion, $perfil).
      * 
      * Función utilizada para la modificación de los campos de un usuario.
@@ -155,7 +155,7 @@ class Usuario {
      * @return objeto $usuario.
      */
 
-    public function modificarUsuario($password, $descripcion, $perfil) {
+    public static function modificarUsuario($password, $descripcion, $perfil) {
         $codUsuario = $this->getCodUsuario();
         $usuario = null;
 
@@ -172,7 +172,7 @@ class Usuario {
         return $usuario;
     }
 
-    /*
+    /**
      * Función borrarUsuario().
      * 
      * Función usada para eliminar la cuenta de un usuario.
@@ -191,7 +191,7 @@ class Usuario {
         return $eliminado;
     }
 
-    /*
+    /**
      * Función registrarUltimaConexion().
      * 
      * Función usada para registrar la última conexión de un usuario.
@@ -221,7 +221,7 @@ class Usuario {
         return $ultimaConexion;
     }
 
-    /*
+    /**
      * Funcion validarCodNoExiste($codUsuario).
      * 
      * Funcion utilizada para validar si el codigo de un usuario ya existe o no.
@@ -239,7 +239,7 @@ class Usuario {
         return $existente;
     }
 
-    /*
+    /**
      * Función buscaUsuariosPorDesc($descripcion, $pagina, $numRegistros).
      * 
      * Función utilizada para buscar un usuario por su descripción.
@@ -266,16 +266,6 @@ class Usuario {
         return $usuario;
     }
 
-    public function buscaOpinion() {
-        
-    }
-
-    public function modificaOpinion() {
-        
-    }
-
-    public function borraOpinion() {
-        
-    }
+   
 
 }

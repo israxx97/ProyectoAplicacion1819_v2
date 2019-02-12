@@ -93,7 +93,7 @@ class UsuarioPDO implements UsuarioDB {
         }
     }
 
-    public static function borrarUsuario($codUsuario) {
+    public function borrarUsuario($codUsuario) {
         $eliminado = false;
         $sql = 'DELETE FROM T01_Usuarios WHERE T01_CodUsuario = ?';
         $rs = DBPDO::ejecutaConsulta($sql, [$codUsuario]);
@@ -105,7 +105,7 @@ class UsuarioPDO implements UsuarioDB {
         return $eliminado;
     }
 
-    public static function registrarUltimaConexion($codUsuario) {
+    public function registrarUltimaConexion($codUsuario) {
         $sql = 'SELECT * FROM T01_Usuarios WHERE T01_CodUsuario = ?';
         $a_fecha = [];
         $fecha = new DateTime();
@@ -154,16 +154,6 @@ class UsuarioPDO implements UsuarioDB {
         return $a_usuarios;
     }
 
-    public static function crearOpinion() {
-        
-    }
-
-    public static function modificaOpinion() {
-        
-    }
-
-    public static function borraOpinion() {
-        
-    }
+  
 
 }

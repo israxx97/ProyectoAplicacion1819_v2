@@ -1,12 +1,10 @@
 <?php
-
 /**
- * Class validacionFormularios
- *
- * Clase que contiene funciones para validar los campos de los formularios
- *
- * PHP version 7.0
- *
+ * File validacionFormularios.php
+ * 
+ * Clase que contiene funciones para validar los campos de los formularios.
+ * 
+ * @function validacionFormularios();
  * @category Validacion
  * @package  Validacion
  * @source ClaseValidacion.php
@@ -21,9 +19,22 @@
  * @since version 1.5 mejorada la ortografía de los mensajes de error
  * se escribian cada vez que querías mostrarlos ahora ya los devuelve cada función a la que se ha llamado sin tener que escribir nada.
  */
+
+/**
+ * Class validacionFormularios
+ * 
+ * Clase de validacion de formularios.
+ * 
+ * @author Israel García Cabañeros
+ * @version 1.0
+ */
 class validacionFormularios {
 
     /**
+     * Comprobar Alfabetico
+     * 
+     * Esta función comprueba que un campo solo tenga caracteres de tipo alfabético.
+     * 
      * @function comprobarAlfabetico();
      * @author Adrián Cando Oviedo
      * @version 1.0 He eliminado todos los if innecesrios que había simplificandolo a llamar a las funciones internas de errores que devuelven un error si le hay
@@ -65,6 +76,10 @@ class validacionFormularios {
 // Return nada si es correcto, si hay errores devuelve un mensaje de error
 // Si es un 1 es obligatorio, si es un 0 no lo es
     /**
+     * Comprobar alfanumérico
+     * 
+     * Esta función comprueba que un campo tenga tanto caracteres alfabéticos como numéricos.
+     * 
      * @function comprobarAlfaNumerico();        
      * @author Adrián Cando Oviedo
      * @version 1.0 He eliminado todos los if innecesrios que había simplificandolo a llamar a las funciones internas de errores que devuelven un error si le hay
@@ -99,6 +114,10 @@ class validacionFormularios {
 // Return null es correcto, si no muestra el mensaje de error
 // Si es un 1 es obligatorio, si es un 0 no lo es
     /**
+     * Comprobar entero
+     * 
+     * Esta función comprueba que un campo tenga caracteres numéricos enteros.
+     * 
      * @author Christian Muñiz de la Huerga
      * @function comprobarEntero();
      * @param $integer Número entero a comprobar
@@ -128,6 +147,10 @@ class validacionFormularios {
 // Return null es correcto, si no muestra el mensaje de error
 // Si es un 1 es obligatorio, si es un 0 no lo es
     /**
+     * Comporbar float
+     * 
+     * Esta función comprueba que un campo tenga solamente caracteres numéricos reales.
+     * 
      * @author Christian Muñiz de la Huerga
      * @function comprobarFloat();
      * @param $float Número entero a comprobar
@@ -158,6 +181,10 @@ class validacionFormularios {
 // Si es un 1 es obligatorio, si es un 0 no lo es
 // 
     /**
+     * Validar email
+     * 
+     * Esta función comprueba que el formato del email sea el correcto.
+     * 
      * @function validarEmail();
      * @author Adrián Cando Oviedo
      * @version 1.3 He modificado el tratamiento de los mensajes de error, y las comprobaciones, adaptadas a la nueva forma de los mensajes. He eliminado los if innecesarios
@@ -196,6 +223,10 @@ class validacionFormularios {
 // Devuelve null si es correcto, sino muestra el mensaje de error
 // Si el parámetro $obligatorio es un 1 es obligatorio, si es un 0 es opcional
     /**
+     * Validar url
+     * 
+     * Esta función comprueba que el formato de la url sea el correcto.
+     * 
      * @function validarURL();
      * @author Christian Muñiz de la Huerga
      * @param $url Cadena a comprobar.
@@ -217,6 +248,10 @@ class validacionFormularios {
     }
 
     /**
+     * Validar fecha
+     * 
+     * Esta función comprueba que la fecha esté formada por enteros y que el formato sea el correcto(AAAA-mm-dd).
+     * 
      * @function validarFecha();
      * @param $fecha Cadena a comprobar.
      * @param $obligatorio Valor booleano indicado mediante 1, si es obligatorio o 0 si no lo es.
@@ -247,6 +282,10 @@ class validacionFormularios {
     }
 
     /**
+     * Validar dni
+     * 
+     * Esta función comprueba que el dni sea correcto, además de un formato de 8 números y una letra.
+     * 
      * @function validarDni();
      *
      * @param $dni cadena a comprobar.
@@ -279,6 +318,10 @@ class validacionFormularios {
 
     // Valida el código postal, si es opcional da por válido que sea correcto o este vacío, si es obligatorio solo da por válido que esté correcto
     /**
+     * Validar código postal
+     * 
+     * Esta function comprueba que el código postal esté formado por un número entero de 5 dígitos.
+     * 
      * @function validarCp();
      * @author Mario Casquero Jañez
      * @param $cp cadena a comprobar.
@@ -300,6 +343,10 @@ class validacionFormularios {
 
     // Valida el password, comprueba longitud y si al menos contiene una mayúscula y un número, si es opcional da por válido que sea correcto o este vacío, si es obligatorio solo da por válido que esté correcto
     /**
+     * Validar contraseña
+     * 
+     * Esta función comprueba que una contraseña cumpla con los requisitos.
+     * 
      * @function validarPassword();
      * @author Mario Casquero Jañez
      * @param $passwd cadena a comprobar.
@@ -325,6 +372,10 @@ class validacionFormularios {
 
 // Valida el radio button, comprueba que tiene al menos un valor marcado, si es opcional da por válido que sea correcto o este vacío, si es obligatorio solo da por válido que esté correcto
     /**
+     * Validar radio button
+     * 
+     * Validar que un radio button tiene un valor seleccionado.
+     * 
      * @function validarRadioB();
      * @author Mario Casquero Jañez
      * @param $radioB nombre del radio button o grupo de radio buttons.
@@ -335,7 +386,7 @@ class validacionFormularios {
         $mensajeError = null;
 
         if (is_null($radioB)) {
-            $mensajeError = " Debe marcarse al menos un valor.";
+            $mensajeError = "Debe marcarse al menos un valor.";
         }
 
         if ($obligatorio == 0) {
@@ -346,6 +397,10 @@ class validacionFormularios {
 
 // Valida el radio button, comprueba que tiene al menos un valor marcado, si es opcional da por válido que sea correcto o este vacío, si es obligatorio solo da por válido que esté correcto
     /**
+     * Validar check box
+     * 
+     * Validar que un check box tiene uno o varios valores seleccionados.
+     * 
      * @function validarCheckBox();
      * @author Mario Casquero Jañez
      * @param $checkB nombre del checkbox o grupo ellos.
@@ -370,6 +425,10 @@ class validacionFormularios {
 // Función para validar si no esta vacio
 // Return false esta vacio, true no esta vacio
     /**
+     * Comprobar no vacio.
+     * 
+     * Esta función comprueba que un campo no esté vacio.
+     * 
      * @function comprobarNoVacio();
      * @author Adrián Cando Oviedo
      * @version 1.3 Pequeño cambio a la hora de la devolución. Antes devolvía un valor boolean, ahora una cadena con el error o sin él
@@ -392,6 +451,10 @@ class validacionFormularios {
 // Si tamaño es 0 significa que no tiene limite
 // Return false no es correcto, true es correcta
     /**
+     * Comprobar máximo tamaño.
+     * 
+     * Esta función comprueba que un campo no sobrepase el tamaño fijado.
+     * 
      * @function comprobarMaxTamanio();
      * @author Adrián Cando Oviedo
      * @version 1.3 Pequeño cambio a la hora de la devolución. Antes devolvía un valor boolean, ahora una cadena con el error o sin él
@@ -413,6 +476,10 @@ class validacionFormularios {
 // Si el tamaño es 0 significa que no tiene limite
 // Return false no es correcto, true es correcta
     /**
+     * Comprobar mínimo tamaño.
+     * 
+     * Esta función comprueba que un campo no sea menor al tamaño fijado.
+     * 
      * @function comprobarMinTamanio();
      * @author Adrián Cando Oviedo
      * @version 1.3 Pequeño cambio a la hora de la devolución. Antes devolvía un valor boolean, ahora una cadena con el error o sin él
@@ -434,8 +501,11 @@ class validacionFormularios {
 // Recibe una fecha y un formato el por defecto es año-mes-dia
 // Devuelve True si es una fecha valida y un false si no la es
     /**
+     * Validar fecha
+     * 
+     * Esta función comprueba que la fecha tenga el formato correcto.
+     * 
      * @function validateFecha();
-     *
      * @param $date Fecha a comprobar
      * @param string $format formato de la cadena
      * @return bool Devuelve null si es correcto, y si no devuelve un error
@@ -446,6 +516,10 @@ class validacionFormularios {
     }
 
     /**
+     * Validar elemento en la lista.
+     * 
+     * Función que valida que un elemento de la lista sea válido.
+     * 
      * @author Christian Muñiz de la Huerga
      * @function validarElementoEnLista();
      * @param $elementoElegido Elemento introducido que se va a comprobar.
@@ -466,6 +540,10 @@ class validacionFormularios {
     }
 
     /**
+     * Validar teléfono.
+     * 
+     * Valida que el formato del número de teléfono sea el correcto.
+     * 
      * @function validaTelefono(); 
      * @author Tania Mateos
      * @version 1.3 Modificada la comprobación de si está vacio. Modificada la devolución de la función, ahora devuelve nada o un mensaje de error.

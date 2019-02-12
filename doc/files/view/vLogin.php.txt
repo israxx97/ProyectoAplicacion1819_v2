@@ -14,7 +14,7 @@
             function mostrarContrasena() {
                 var tipo = document.getElementById("password");
 
-                if (tipo.type == "password") {
+                if (tipo.type === "password") {
                     tipo.type = "text";
                 } else {
                     tipo.type = "password";
@@ -45,7 +45,7 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="fas fa-key"></i></span>
                                 </div>
-                                <input name="password" type="password" value="<?php echo $_REQUEST['password']; ?>" class="form-control" placeholder="Contraseña">
+                                <input id="password" name="password" type="password" class="form-control" placeholder="Contraseña">
                             </div>
                             <div class="row align-items-center remember">
                                 <input onclick="mostrarContrasena()" type="checkbox">Mostrar Contraseña <!-- onclick="mostrarContrasena()" -->

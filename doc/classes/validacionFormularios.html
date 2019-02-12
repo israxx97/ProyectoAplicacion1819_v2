@@ -106,12 +106,12 @@
                         <ul class="dropdown-menu">
                             <li>
                                 <a href="../reports/errors.html">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">118</span>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">107</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="../reports/markers.html">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <i class="icon-list-alt"></i>&#160;Markers <span class="label label-info pull-right">0</span>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <i class="icon-list-alt"></i>&#160;Markers <span class="label label-info pull-right">0</span>
                                 </a>
                             </li>
                             <li>
@@ -136,10 +136,10 @@
                                 <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-1893118457"></a>
+                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-1102567111"></a>
                                 <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
             </div>
-            <div id="namespace-1893118457" class="accordion-body collapse in">
+            <div id="namespace-1102567111" class="accordion-body collapse in">
                 <div class="accordion-inner">
 
                     
@@ -168,8 +168,7 @@
 
                     <h1><small>\</small>validacionFormularios</h1>
                     <p><em>Class validacionFormularios</em></p>
-                    <p>Clase que contiene funciones para validar los campos de los formularios</p>
-<p>PHP version 7.0</p>
+                    <p>Clase de validacion de formularios.</p>
                     
                                         
                     <section id="summary">
@@ -259,47 +258,10 @@
                     <table class="table table-condensed">
                                             <tr>
                             <th>
-                                category
-                            </th>
-                            <td>
-                                                                    <p>Validacion</p>
-                                                            </td>
-                        </tr>
-                                            <tr>
-                            <th>
-                                source
-                            </th>
-                            <td>
-                                                                    <p>ClaseValidacion.php</p>
-                                                            </td>
-                        </tr>
-                                            <tr>
-                            <th>
-                                since
-                            </th>
-                            <td>
-                                                                    <p>Versión 1.1 Se han formateado los mensajes de error y modificado validarDni()</p>
-                                                                    <p>Version 1.2 Se han acabado de formatear los mensajes de error, se han modificado validarURL() y se han añadido validarCp(), validarPassword(), validarRadioB() y validarCheckBox()</p>
-                                                                    <p>version 1.4 Mejorado los métodos comprobarEntero() y comprobarFlaoat()
-comprobarAlfanumerico y validarEmail. También he eliminado una función inservible &quot;comprobarCódigo&quot;. Este cambio se basa en simplificar la cantidad de código ya que antes los * errores</p>
-                                                                    <p>version 1.5 mejorada la ortografía de los mensajes de error
-se escribian cada vez que querías mostrarlos ahora ya los devuelve cada función a la que se ha llamado sin tener que escribir nada.</p>
-                                                            </td>
-                        </tr>
-                                            <tr>
-                            <th>
-                                copyright
-                            </th>
-                            <td>
-                                                                    <p>21-10-2018</p>
-                                                            </td>
-                        </tr>
-                                            <tr>
-                            <th>
                                 author
                             </th>
                             <td>
-                                                                    <p>Versión 1.3 Adrián Cando Oviedo</p>
+                                                                    <p>Israel García Cabañeros</p>
                                                             </td>
                         </tr>
                                             <tr>
@@ -307,8 +269,7 @@ se escribian cada vez que querías mostrarlos ahora ya los devuelve cada funció
                                 version
                             </th>
                             <td>
-                                                                    <p>Versión 1.3 Se han modificado la devolución de varias funciones: comprobarNoVacío, comprobarMintamanio, comprobarMaxTamanio, comprobarEntero, comprobarFloat, antes estas 3 devolvían un valor boolean, ahora
-devuelven una cadena con el mensaje de error. Estas 3 anteriores funciones se emplean en otras 3 funciones que he cambiado, algo más compuestas las cuales son: comprobarAlfabético,</p>
+                                                                    
                                                             </td>
                         </tr>
                                         </table>
@@ -330,8 +291,8 @@ devuelven una cadena con el mensaje de error. Estas 3 anteriores funciones se em
                 <h3 class="public ">comprobarAlfabetico()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
                 <pre class="signature" style="margin-right: 54px;">comprobarAlfabetico(  <span class="argument">$cadena</span>,   <span class="argument">$maxTamanio</span>,   <span class="argument">$minTamanio</span>,   <span class="argument">$obligatorio</span>) : null</pre>
-                <p><em></em></p>
-                
+                <p><em>Comprobar Alfabetico</em></p>
+                <p>Esta función comprueba que un campo solo tenga caracteres de tipo alfabético.</p>
 
                                     <h4>Parameters</h4>
                     <table class="table table-condensed table-hover">
@@ -420,8 +381,8 @@ concatenando esos errores en una cadena. Y comprobando que está vacío siempre 
                 <h3 class="public ">comprobarAlfaNumerico()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
                 <pre class="signature" style="margin-right: 54px;">comprobarAlfaNumerico(  <span class="argument">$cadena</span>,   <span class="argument">$maxTamanio</span>,   <span class="argument">$minTamanio</span>,   <span class="argument">$obligatorio</span>) : null</pre>
-                <p><em></em></p>
-                
+                <p><em>Comprobar alfanumérico</em></p>
+                <p>Esta función comprueba que un campo tenga tanto caracteres alfabéticos como numéricos.</p>
 
                                     <h4>Parameters</h4>
                     <table class="table table-condensed table-hover">
@@ -510,8 +471,8 @@ concatenando esos errores en una cadena. Y comprobando que está vacío siempre 
                 <h3 class="public ">comprobarEntero()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
                 <pre class="signature" style="margin-right: 54px;">comprobarEntero(  <span class="argument">$integer</span>,   <span class="argument">$max</span>,   <span class="argument">$min</span>,   <span class="argument">$obligatorio</span>) : null|string</pre>
-                <p><em></em></p>
-                
+                <p><em>Comprobar entero</em></p>
+                <p>Esta función comprueba que un campo tenga caracteres numéricos enteros.</p>
 
                                     <h4>Parameters</h4>
                     <table class="table table-condensed table-hover">
@@ -582,8 +543,8 @@ Warning: count(): Parameter must be an array or an object that implements Counta
                 <h3 class="public ">comprobarFloat()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
                 <pre class="signature" style="margin-right: 54px;">comprobarFloat(  <span class="argument">$float</span>,   <span class="argument">$max</span>,   <span class="argument">$min</span>,   <span class="argument">$obligatorio</span>) : null|string</pre>
-                <p><em></em></p>
-                
+                <p><em>Comporbar float</em></p>
+                <p>Esta función comprueba que un campo tenga solamente caracteres numéricos reales.</p>
 
                                     <h4>Parameters</h4>
                     <table class="table table-condensed table-hover">
@@ -654,8 +615,8 @@ Warning: count(): Parameter must be an array or an object that implements Counta
                 <h3 class="public ">validarEmail()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
                 <pre class="signature" style="margin-right: 54px;">validarEmail(  <span class="argument">$email</span>,   <span class="argument">$maxTamanio</span>,   <span class="argument">$minTamanio</span>,   <span class="argument">$obligatorio</span>) : null</pre>
-                <p><em></em></p>
-                
+                <p><em>Validar email</em></p>
+                <p>Esta función comprueba que el formato del email sea el correcto.</p>
 
                                     <h4>Parameters</h4>
                     <table class="table table-condensed table-hover">
@@ -744,8 +705,8 @@ He añadido nuevos comentarios explicando el nuevo funcionamiento.</p>
                 <h3 class="public ">validarURL()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
                 <pre class="signature" style="margin-right: 54px;">validarURL(  <span class="argument">$url</span>,   <span class="argument">$obligatorio</span>) : null|string</pre>
-                <p><em></em></p>
-                
+                <p><em>Validar url</em></p>
+                <p>Esta función comprueba que el formato de la url sea el correcto.</p>
 
                                     <h4>Parameters</h4>
                     <table class="table table-condensed table-hover">
@@ -806,8 +767,8 @@ Warning: count(): Parameter must be an array or an object that implements Counta
                 <h3 class="public ">validarFecha()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
                 <pre class="signature" style="margin-right: 54px;">validarFecha(  <span class="argument">$fecha</span>,   <span class="argument">$obligatorio</span>) : null|string</pre>
-                <p><em></em></p>
-                
+                <p><em>Validar fecha</em></p>
+                <p>Esta función comprueba que la fecha esté formada por enteros y que el formato sea el correcto(AAAA-mm-dd).</p>
 
                                     <h4>Parameters</h4>
                     <table class="table table-condensed table-hover">
@@ -922,8 +883,8 @@ Warning: count(): Parameter must be an array or an object that implements Counta
                 <h3 class="public ">validarCp()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
                 <pre class="signature" style="margin-right: 54px;">validarCp(  <span class="argument">$cp</span>,   <span class="argument">$obligatorio</span>) : null|string</pre>
-                <p><em></em></p>
-                
+                <p><em>Validar código postal</em></p>
+                <p>Esta function comprueba que el código postal esté formado por un número entero de 5 dígitos.</p>
 
                                     <h4>Parameters</h4>
                     <table class="table table-condensed table-hover">
@@ -984,8 +945,8 @@ Warning: count(): Parameter must be an array or an object that implements Counta
                 <h3 class="public ">validarPassword()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
                 <pre class="signature" style="margin-right: 54px;">validarPassword(  <span class="argument">$passwd</span>,   <span class="argument">$obligatorio</span>,   <span class="argument">$longitud</span>) : null|string</pre>
-                <p><em></em></p>
-                
+                <p><em>Validar contraseña</em></p>
+                <p>Esta función comprueba que una contraseña cumpla con los requisitos.</p>
 
                                     <h4>Parameters</h4>
                     <table class="table table-condensed table-hover">
@@ -1051,8 +1012,8 @@ Warning: count(): Parameter must be an array or an object that implements Counta
                 <h3 class="public ">validarRadioB()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
                 <pre class="signature" style="margin-right: 54px;">validarRadioB(  <span class="argument">$radioB</span>,   <span class="argument">$obligatorio</span>) : null|string</pre>
-                <p><em></em></p>
-                
+                <p><em>Validar radio button</em></p>
+                <p>Validar que un radio button tiene un valor seleccionado.</p>
 
                                     <h4>Parameters</h4>
                     <table class="table table-condensed table-hover">
@@ -1113,8 +1074,8 @@ Warning: count(): Parameter must be an array or an object that implements Counta
                 <h3 class="public ">validarCheckBox()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
                 <pre class="signature" style="margin-right: 54px;">validarCheckBox(  <span class="argument">$checkB</span>,   <span class="argument">$obligatorio</span>) : null|string</pre>
-                <p><em></em></p>
-                
+                <p><em>Validar check box</em></p>
+                <p>Validar que un check box tiene uno o varios valores seleccionados.</p>
 
                                     <h4>Parameters</h4>
                     <table class="table table-condensed table-hover">
@@ -1175,8 +1136,8 @@ Warning: count(): Parameter must be an array or an object that implements Counta
                 <h3 class="public ">comprobarNoVacio()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
                 <pre class="signature" style="margin-right: 54px;">comprobarNoVacio(  <span class="argument">$cadena</span>) : null</pre>
-                <p><em></em></p>
-                
+                <p><em>Comprobar no vacio.</em></p>
+                <p>Esta función comprueba que un campo no esté vacio.</p>
 
                                     <h4>Parameters</h4>
                     <table class="table table-condensed table-hover">
@@ -1249,8 +1210,8 @@ $mensajeError -&gt; Que contiene una cadena con los errores que han surgido conc
                 <h3 class="public ">comprobarMaxTamanio()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
                 <pre class="signature" style="margin-right: 54px;">comprobarMaxTamanio(  <span class="argument">$cadena</span>,   <span class="argument">$tamanio</span>) : null</pre>
-                <p><em></em></p>
-                
+                <p><em>Comprobar máximo tamaño.</em></p>
+                <p>Esta función comprueba que un campo no sobrepase el tamaño fijado.</p>
 
                                     <h4>Parameters</h4>
                     <table class="table table-condensed table-hover">
@@ -1328,8 +1289,8 @@ $mensajeError -&gt; Que contiene una cadena con los errores que han surgido conc
                 <h3 class="public ">comprobarMinTamanio()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
                 <pre class="signature" style="margin-right: 54px;">comprobarMinTamanio(  <span class="argument">$cadena</span>,   <span class="argument">$tamanio</span>) : null</pre>
-                <p><em></em></p>
-                
+                <p><em>Comprobar mínimo tamaño.</em></p>
+                <p>Esta función comprueba que un campo no sea menor al tamaño fijado.</p>
 
                                     <h4>Parameters</h4>
                     <table class="table table-condensed table-hover">
@@ -1407,8 +1368,8 @@ $mensajeError -&gt; Que contiene una cadena con los errores que han surgido conc
                 <h3 class="public ">validateDate()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
                 <pre class="signature" style="margin-right: 54px;">validateDate(  <span class="argument">$date</span>, string  <span class="argument">$format = &#039;Y-m-d&#039;</span>) : boolean</pre>
-                <p><em></em></p>
-                
+                <p><em>Validar fecha</em></p>
+                <p>Esta función comprueba que la fecha tenga el formato correcto.</p>
 
                                     <h4>Parameters</h4>
                     <table class="table table-condensed table-hover">
@@ -1461,8 +1422,8 @@ Warning: count(): Parameter must be an array or an object that implements Counta
                 <h3 class="public ">validarElementoEnLista()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
                 <pre class="signature" style="margin-right: 54px;">validarElementoEnLista(  <span class="argument">$elementoElegido</span>,   <span class="argument">$aOpciones</span>,   <span class="argument">$obligatorio</span>) : null|string</pre>
-                <p><em></em></p>
-                
+                <p><em>Validar elemento en la lista.</em></p>
+                <p>Función que valida que un elemento de la lista sea válido.</p>
 
                                     <h4>Parameters</h4>
                     <table class="table table-condensed table-hover">
@@ -1528,8 +1489,8 @@ Warning: count(): Parameter must be an array or an object that implements Counta
                 <h3 class="public ">validaTelefono()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
                 <pre class="signature" style="margin-right: 54px;">validaTelefono(  <span class="argument">$tel</span>,   <span class="argument">$obligatorio</span>) : null</pre>
-                <p><em></em></p>
-                
+                <p><em>Validar teléfono.</em></p>
+                <p>Valida que el formato del número de teléfono sea el correcto.</p>
 
                                     <h4>Parameters</h4>
                     <table class="table table-condensed table-hover">
@@ -1641,7 +1602,7 @@ $mensajeError -&gt; Que contiene una cadena con los errores que han surgido conc
                 <section class="span10 offset1">
                     <hr />
                     Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
-                    on February 11th, 2019 at 12:36.
+                    on February 12th, 2019 at 09:32.
                 </section>
             </section>
         </section>
