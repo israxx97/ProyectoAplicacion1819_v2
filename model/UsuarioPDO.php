@@ -11,7 +11,6 @@
  *
  * @author Israel García Cabañeros
  */
-require_once "UsuarioDB.php";
 require_once "DBPDO.php";
 require_once "UsuarioDB.php";
 
@@ -62,9 +61,11 @@ class UsuarioPDO implements UsuarioDB {
             $a_usuarios['T01_FechaHoraUltimaConexion'] = $fecha->getTimestamp();
             $a_usuarios['T01_Perfil'] = 'Usuario';
         }
+        
+        return $a_usuarios;
     }
 
-    public static function modificarUsuario($codUsuario, $password, $descripcion) {
+    public function modificarUsuario($codUsuario, $password, $descripcion) {
         $a_usuarios = [];
 
         if ($descripcion == null) {
@@ -113,13 +114,13 @@ class UsuarioPDO implements UsuarioDB {
 
         if ($rs->rowCount() == 1) {
             $fetchRow = $rs->fetchObject();
-            $a_fecha['T01_NumAccesos'] = $rs->T01_NumAccesos;
-            $a_fecha['T01_FechaHoraUltimaConexion'] = $rs->T01_FechaHoraUltimaConexion;
-            $a_fecha['T01_DescUsuario'] = $rs->T01_DescUsuario;
+            $a_fecha['T01_NumAccesos'] = $fetchRow->T01_NumAccesos;
+            $a_fecha['T01_FechaHoraUltimaConexion'] = $fetchRow->T01_FechaHoraUltimaConexion;
+            $a_fecha['T01_DescUsuario'] = $fetchRow->T01_DescUsuario;
         }
 
         $sql2 = 'UPDATE T01_Usuarios SET T01_NumAccesos = T01_NumAccesos + 1, T01_FechaHoraUltimaConexion = ? WHERE T01_CodUsuario = ?';
-        $rs2 = DBPDO::ejecutaConsulta($sql, [$fecha->getTimestamp(), $codUsuario]);
+        $rs2 = DBPDO::ejecutaConsulta($sql2, [$fecha->getTimestamp(), $codUsuario]);
         return $a_fecha;
     }
 

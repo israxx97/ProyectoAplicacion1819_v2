@@ -32,58 +32,14 @@ if (isset($_REQUEST['entrar']) && $entradaOK == true) {
     } else {
         $_SESSION['username'] = $usuario;
         $_SESSION['pagina'] = 'inicio';
-        //$_SESSION['visitas'] = $usuario->registrarUltimaConexion();
+        $_SESSION['visitas'] = $usuario->registrarUltimaConexion();
         header("Location: index.php");
+        exit;
     }
-} else {
-    $_SESSION['pagina'] = 'login';
-    require_once $vistas['layout'];
 }
 
-/*switch (true) {
-    case (isset($_REQUEST['entrar'])):
-        $a_errores[username] = validacionFormularios::comprobarAlfabetico($_REQUEST['username'], LONGMAXUSUARIO, LONGMINUSUARIO, OBLIGATORIO);
-        $a_errores[password] = validacionFormularios::comprobarAlfaNumerico($_REQUEST['password'], LONGMAXPASS, LONGMINPASS, OBLIGATORIO);
-        foreach ($a_errores as $value => $key) {
-            if ($key != null) {
-                $entradaOK = false;
-                $_REQUEST[$value] = '';
-            }
-        }
-
-        break;
-
-    case (isset($_REQUEST['entrar']) && $entradaOK == true):
-        $a_respuesta[username] = $_REQUEST['username'];
-        $a_respuesta[password] = $_REQUEST['password'];
-        $usuario = Usuario::validarUsuario($a_respuesta[username], $a_respuesta[password]);
-
-        switch (true) {
-            case (is_null(($usuario))):
-                $a_errores[password] = $a_errores[password] . 'Usuario o contraseña incorrectos.';
-                $_SESSION['pagina'] = 'login';
-                require_once $vistas['layout'];
-
-                break;
-
-            default:
-                $_SESSION['username'] = $usuario;
-                $_SESSION['pagina'] = 'inicio';
-                /* $_SESSION['visitas'] = '<p>' . Usuario::registrarUltimaConexion($_REQUEST['username']) . '</p>'; */
-                /*header("Location: index.php");*/
-
-                /*break;
-        }
-
-
-        break;
-
-    default:
-        $_SESSION['pagina'] = 'login';
-        require_once $vistas['layout'];
-
-        break;
-}
+$_SESSION['pagina'] = 'login';
+require_once $vistas["layout"];
 
 
 

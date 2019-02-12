@@ -13,8 +13,10 @@
 interface UsuarioDB {
 
     public static function validarUsuario($codUsuario, $password);
+    
+    public static function altaUsuario($codUsuario, $password, $descripcion);
 
-    public static function modificarUsuario($codUsuario, $password, $descripcion);
+    public function modificarUsuario($codUsuario, $password, $descripcion);
 
     public function borrarUsuario($codUsuario);
 

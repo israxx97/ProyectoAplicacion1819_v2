@@ -101,7 +101,6 @@ class Usuario {
      * @param $password.
      * @return objeto $usuario.
      */
-
     public static function validarUsuario($codUsuario, $password) {
         $usuario = null;
         $a_usuarios = UsuarioPDO::validarUsuario($codUsuario, $password);
@@ -128,7 +127,6 @@ class Usuario {
      * @param $descripcion.
      * @return objeto $usuario.
      */
-
     public static function altaUsuario($codUsuario, $password, $descripcion) {
         $usuario = null;
         $a_usuarios = UsuarioPDO::altaUsuario($codUsuario, $password, $descripcion);
@@ -154,8 +152,7 @@ class Usuario {
      * @param $perfil.
      * @return objeto $usuario.
      */
-
-    public static function modificarUsuario($password, $descripcion, $perfil) {
+    public function modificarUsuario($password, $descripcion, $perfil) {
         $codUsuario = $this->getCodUsuario();
         $usuario = null;
 
@@ -183,7 +180,6 @@ class Usuario {
      * @since 2019-02-11
      * @return boolean $eliminado.
      */
-
     public function borrarUsuario() {
         $codUsuario = $this->getCodUsuario();
         $eliminado = UsuarioPDO::borrarUsuario($codUsuario);
@@ -202,14 +198,13 @@ class Usuario {
      * @since 2019-02-11
      * @return String $ultimaConexion.
      */
-
     public function registrarUltimaConexion() {
         setlocale(LC_TIME, 'es_ES.UTF-8');
         date_default_timezone_set('Europe/Madrid');
 
         $codUsuario = $this->getCodUsuario();
         $a_conexiones = UsuarioPDO::registrarUltimaConexion($codUsuario);
-        $fecha = date('d-m-Y H:i:s', $a_conexiones['T01_FechaUltimaConexion']);
+        $fecha = date('d-m-Y H:i:s', $a_conexiones['T01_FechaHoraUltimaConexion']);
         $contadorConexiones = $a_conexiones['T01_NumAccesos'];
 
         if ($contadorConexiones == 0) {
@@ -233,7 +228,6 @@ class Usuario {
      * @param $codUsuario.
      * @return boolean $existente.
      */
-
     public static function validarCodNoExiste($codUsuario) {
         $existente = UsuarioPDO::validarCodNoExiste($codUsuario);
         return $existente;
@@ -253,7 +247,6 @@ class Usuario {
      * @param $numRegistros.
      * @return objeto $usuario.
      */
-
     public static function buscaUsuariosPorDesc($descripcion, $pagina, $numRegistros) {
         $a_usuarios = UsuarioPDO::buscaUsuariosPorDesc($descripcion, $pagina, $numRegistros);
 
@@ -266,6 +259,17 @@ class Usuario {
         return $usuario;
     }
 
-   
+    public static function buscaUsuariosPorCodigo($codigo) {
+        $a_usuarios = UsuarioPDO::buscaUsuariosPorDesc($codigo);
+        if (!empty($a_usuarios)) {
+            $usuario = new Usuario($a_usuarios['T01_CodUsuario'], $a_usuarios['T01_Password'], $a_usuarios['T01_DescUsuario'], $a_usuarios['T01_NumAccesos'], $a_usuarios['T01_FechaHoraUltimaConexion'], $a_usuarios['T01_Perfil']);
+        }
+
+        return $usuario;
+    }
+
+    public static function contarUsuariosPorDesc($descripcion) {
+        return UsuarioPDO::contarUsuariosPorDesc($descripcion);
+    }
 
 }

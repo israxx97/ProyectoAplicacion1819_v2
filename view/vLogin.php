@@ -39,22 +39,25 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="fas fa-user"></i></span>
                                 </div>
-                                <input name="username" type="text" value="<?php echo $_REQUEST['username']; ?>" class="form-control" placeholder="Usuario">
+                                <input id="username" name="username" type="text" value="<?php echo $_REQUEST['username']; ?>" class="form-control" placeholder="Usuario"><br>
+                            
                             </div>
+                            <p style="color: red;"><?php echo $a_errores[username] ?></p>
                             <div class="input-group form-group">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="fas fa-key"></i></span>
                                 </div>
-                                <input id="password" name="password" type="password" class="form-control" placeholder="Contraseña">
+                                <input id="password" name="password" type="password" class="form-control" placeholder="Contraseña"><br>
+                            
                             </div>
+                            <p style="color: red;"><?php echo $a_errores[password]; ?></p>
                             <div class="row align-items-center remember">
                                 <input onclick="mostrarContrasena()" type="checkbox">Mostrar Contraseña <!-- onclick="mostrarContrasena()" -->
                             </div>
                             <div class="form-group">
                                 <input name="entrar" type="submit" value="Entrar" class="btn float-right login_btn">
                             </div>
-                            <p style="color: red;"><?php echo $a_errores[username] ?></p>
-                            <p style="color: red;"><?php echo $a_errores[password]; ?></p>
+                            
                             <!-- <div class="card-footer">
                                 <div class="d-flex justify-content-center links">
                                     ¿No tienes una cuenta?<a href="./view/register.php">Registrarse</a>
