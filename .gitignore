@@ -1,2 +1,4 @@
 nbproject/private/
 config/configDB.php
+scriptDB/01_CrearBBDD.sql
+scriptDB/01_Insercion.sql

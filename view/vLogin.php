@@ -6,6 +6,8 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="webroot/css/styles_1.css">
@@ -40,7 +42,7 @@
                                     <span class="input-group-text"><i class="fas fa-user"></i></span>
                                 </div>
                                 <input id="username" name="username" type="text" value="<?php echo $_REQUEST['username']; ?>" class="form-control" placeholder="Usuario"><br>
-                            
+
                             </div>
                             <p style="color: red;"><?php echo $a_errores[username] ?></p>
                             <div class="input-group form-group">
@@ -48,7 +50,7 @@
                                     <span class="input-group-text"><i class="fas fa-key"></i></span>
                                 </div>
                                 <input id="password" name="password" type="password" class="form-control" placeholder="Contraseña"><br>
-                            
+
                             </div>
                             <p style="color: red;"><?php echo $a_errores[password]; ?></p>
                             <div class="row align-items-center remember">
@@ -57,7 +59,7 @@
                             <div class="form-group">
                                 <input name="entrar" type="submit" value="Entrar" class="btn float-right login_btn">
                             </div>
-                            
+
                             <!-- <div class="card-footer">
                                 <div class="d-flex justify-content-center links">
                                     ¿No tienes una cuenta?<a href="./view/register.php">Registrarse</a>

@@ -22,9 +22,8 @@
                     <span class="navbar-brand d-flex align-items-center">
                         Página principal de <?php echo $_SESSION['username']->getDescUsuario(); ?>
                     </span>
-                </div>
-                <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
-                    <div style="right: 150%;" class="dropdown">
+                    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
+                    <div class="dropdown">
                         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Perfil
                         </button>
@@ -39,24 +38,31 @@
                         </div>
                     </div>
                 </form>
+                </div>
+                
             </div>
         </header>
         <main role="main">
-            <div class="container-fluid d-flex justify-content-center">
-                <span class="navbar-brand d-flex align-items-center">
-                    <?php
-                    echo '<p class="alert alert-success">' . $_SESSION['username']->getDescUsuario() . $_SESSION['visitas'] . '</p>';
-                    ?>
+            <div class="album py-5 bg-light">
+                <div class="container">
+                    <div class="container-fluid d-flex justify-content-center">
+                        <span class="navbar-brand d-flex align-items-center">
+                            <?php
+                            echo '<p class="alert alert-success">' . $_SESSION['username']->getDescUsuario() . $_SESSION['visitas'] . '</p>';
+                            ?>
+                    </div>
+
+
+                </div>
             </div>
         </main>
-        <footer class="text-muted">
+        <!-- <footer class="text-muted">
             <div class="container">
                 <p class="float-right">
                     <a href="https://www.educa.jcyl.es">israel.garcab@educa.jcyl.es</a>
                 </p>
                 <p>Israel García Cabañeros &copy; 2019<br><a href="#">RSS</a> | <a href="#">Atom</a> | <a href="https://getbootstrap.com/">Bootstrap</a></p>
             </div>
-        </footer>
-
+        </footer> -->
     </body>
 </html>
