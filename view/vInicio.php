@@ -23,23 +23,22 @@
                         Página principal de <?php echo $_SESSION['username']->getDescUsuario(); ?>
                     </span>
                     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Perfil
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <?php if ($_SESSION['username']->getPerfil() == 'Administrador') { ?>
-                                <input class="dropdown-item bg-warning" type="submit" name="" value="Mto. Usuarios">
-                                <div class="dropdown-divider"></div>
-                            <?php } ?>
-                            <input class="dropdown-item" type="submit" name="" value="Editar Perfil">
-                            <input class="dropdown-item" type="submit" name="" value="Borrar Cuenta">
-                            <input class="dropdown-item bg-danger" type="submit" name="salir" value="Cerrar Sesión">
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Perfil
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <?php if ($_SESSION['username']->getPerfil() == 'Administrador') { ?>
+                                    <input class="dropdown-item bg-warning" type="submit" name="" value="Mto. Usuarios">
+                                    <div class="dropdown-divider"></div>
+                                <?php } ?>
+                                <input class="dropdown-item" type="submit" name="" value="Editar Perfil">
+                                <input class="dropdown-item" type="submit" name="" value="Borrar Cuenta">
+                                <input class="dropdown-item bg-danger" type="submit" name="salir" value="Cerrar Sesión">
+                            </div>
                         </div>
-                    </div>
-                </form>
+                    </form>
                 </div>
-                
             </div>
         </header>
         <main role="main">
@@ -51,8 +50,6 @@
                             echo '<p class="alert alert-success">' . $_SESSION['username']->getDescUsuario() . $_SESSION['visitas'] . '</p>';
                             ?>
                     </div>
-
-
                 </div>
             </div>
         </main>

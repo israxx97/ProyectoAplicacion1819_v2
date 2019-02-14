@@ -21,8 +21,8 @@ require_once $vista;
     <div class="container">
         <p class="float-right">
             <a href="https://www.educa.jcyl.es" target="_blank">israel.garcab@educa.jcyl.es</a><br>
-            <a href="webroot/images/180301CatalogoDeRequisitos.pdf" target="_blank">Catalogo de requisitos</a> | 
-            <a href="webroot/images/180503ArbolDeNavegacion.jpg" target="_blank">Arbol de navegación</a><br>
+            <a href="webroot/images/180301CatalogoDeRequisitos.pdf" target="_blank">Catálogo de requisitos</a> | 
+            <a href="webroot/images/180503ArbolDeNavegacion.jpg" target="_blank">Árbol de navegación</a><br>
             <a href="webroot/images/180503CasosDeUso.jpg" target="_blank">Casos de uso</a> | 
             <a href="webroot/images/180503DiagramaDeClases.jpg" target="_blank">Diagrama de clases</a><br>
             <a href="webroot/images/180503ModeloFisicoDeDatos.jpg" target="_blank">Modelo físico de datos</a> | 
