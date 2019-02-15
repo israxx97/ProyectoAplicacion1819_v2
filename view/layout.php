@@ -37,7 +37,9 @@ require_once $vista;
             <a href="https://es.wikipedia.org/wiki/HTML" target="_blank">HTML</a> |
             <a href="https://es.wikipedia.org/wiki/Hoja_de_estilos_en_cascada" target="_blank">CSS</a> |
             <a href="https://jquery.com/" target="_blank">JQuery</a> |
-            <a href="http://php.net/manual/es/intro-whatis.php" target="_blank">PHP</a>
+            <a href="http://php.net/manual/es/intro-whatis.php" target="_blank">PHP</a> | 
+            <a href="https://atom.io/" target="_blank">Atom</a><br>
+            <a href="https://netbeans.org/" target="_blank">Netbeans</a><br>
             <a href="" target="_blank"></a><br>
         </p>
     </div>

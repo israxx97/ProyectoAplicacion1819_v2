@@ -31,9 +31,11 @@
                                 <?php if ($_SESSION['username']->getPerfil() == 'Administrador') { ?>
                                     <input class="dropdown-item bg-warning" type="submit" name="" value="Mto. Usuarios">
                                     <div class="dropdown-divider"></div>
+                                <?php } else if ($_SESSION['username']->getPerfil() == 'Usuario') { ?>
+                                    <input class="dropdown-item bg-warning" type="submit" name="mtoUsuarios" value="Mto. Usuarios" disabled>
+                                    <div class="dropdown-divider"></div>
                                 <?php } ?>
-                                <input class="dropdown-item" type="submit" name="" value="Editar Perfil">
-                                <input class="dropdown-item" type="submit" name="" value="Borrar Cuenta">
+                                <input style="margin-bottom: 5px;" class="dropdown-item bg-info" type="submit" name="miPerfil" value="Mi perfil">
                                 <input class="dropdown-item bg-danger" type="submit" name="salir" value="Cerrar Sesión">
                             </div>
                         </div>
